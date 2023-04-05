@@ -1,0 +1,118 @@
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Darker-cyan: hsl(158, 36%, 27%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-regular: 500;
+    --font-bold: 700;
+
+    --font-family-accent: "Fraunces", serif;
+    --font-family-regular: "Montserrat", sans-serif;
+}
+/* resets */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
+    line-height: 1;
+    overflow-wrap: break-word;
+}
+
+body {
+    color: var(--Dark-grayish-blue);
+    background-color: var(--Cream);
+    display: grid;
+    font-family: var(--font-family-regular);
+    font-weight: var(--font-regular);
+    font-size: .9rem;
+    line-height: 1.7;
+    margin: 1rem;
+    min-height: 100vh;
+    place-content: center;
+}
+
+.product__price {
+    display: flex;
+    gap: 1rem;
+}
+
+.product {
+    background-color: var(--White);
+    border-radius: .5rem;
+    display: grid;
+    max-width: 600px;
+    overflow: hidden;
+    
+}
+
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__information {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.product__type {
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product__name {
+    color: var(--Very-dark-blue);
+    font-family: var(--font-family-accent);
+    font-size: 2.0rem;
+}
+
+.product__price {
+    align-items: center;
+}
+
+.product__price__new {
+    font-family: var(--font-family-accent);
+    font-size: 2rem;
+    color: var(--Dark-cyan);
+}
+
+.product__price__old {
+    color: var(--Dark-grayish-blue);
+    font-size: 1rem;
+
+}
+
+.button {
+    align-items: center;
+    background-color: var(--Dark-cyan);
+    border: 0;
+    border-radius: .5rem;
+    color: var(--White);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-bold);
+    gap: .5rem;
+    justify-content: center;
+    padding: .8em 1.5em;
+
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--Darker-cyan);
+}
